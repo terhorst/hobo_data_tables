@@ -30,7 +30,7 @@ sCookiePrefix sDefaultContent sDom sName sPaginationType sScrollX
 sScrollXInner sScrollY sServerMethod sServerMethod sSortDataType
 sTitle sType sWidth
 ))
-    events, html_attrs = attrs.partition_hash([%w(fnAddData fnAdjustColumnSizing fnClearTable fnClose
+    events, html_attrs = attrs.partition_hash(%w(fnAddData fnAdjustColumnSizing fnClearTable fnClose
 fnCookieCallback fnCreatedCell fnCreatedRow fnDeleteRow fnDestroy
 fnDraw fnDrawCallback fnFilter fnFooterCallback fnFormatNumber
 fnGetData fnGetNodes fnGetPosition fnHeaderCallback fnInfoCallback
@@ -38,7 +38,7 @@ fnInitComplete fnIsDataTable fnIsOpen fnOpen fnPageChange
 fnPreDrawCallback fnRender fnRowCallback fnServerData fnServerData
 fnServerParams fnServerParams fnSetColumnVis fnSettings fnSort
 fnSortListener fnStateLoad fnStateLoaded fnStateLoadParams fnStateSave
-fnStateSaveParams fnTables fnUpdate fnVersionCheck fnVersionCheck)])
+fnStateSaveParams fnTables fnUpdate fnVersionCheck fnVersionCheck))
     rapid_opts = {:options => options, :events => events}
  %>
   <table merge data-rapid="#{data_rapid('data-table', rapid_opts )}" param="default" />
